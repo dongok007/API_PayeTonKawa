@@ -34,7 +34,7 @@ client = TestClient(app)
 
 def test_create_client():
     response = client.post("/clients", json={
-        "nom": "Doe",
+        "nom": "Dongo",
         "prenom": "John",
         "date_naissance": "1990-01-01",
         "ville": "Paris",
@@ -43,7 +43,7 @@ def test_create_client():
     })
     assert response.status_code == 200
     data = response.json()
-    assert data["nom"] == "Doe"
+    assert data["nom"] == "Dongo"
     assert data["prenom"] == "John"
     assert data["date_naissance"] == "1990-01-01"
     assert data["ville"] == "Paris"
